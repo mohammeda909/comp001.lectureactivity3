@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif:400,400i,700|Roboto+Condensed:400,700|Roboto+Mono&display=swap');
+
+/* Link styles */
+a:link, a:visited {
+	color: blue;
+}
+
+a:focus, a:hover {
+	background-color: #ddddff; /* Add background on hover/focus */
+	border-radius: 5px; /* Rounded corners */
+	text-decoration: underline; /* Underline links */
+	transition-duration: 0.2s; /* Smooth transition for hover effect */
+	transition-property: background;
+}
+
+/* Body styles */
+body {
+	font-family: 'Noto Serif', serif; /* Set the font for the body */
+	font-size: 18px; /* Base font size */
+	margin: 0; /* Remove default margin */
+	padding: 0; /* Remove default padding */
+	display: grid; /* Enable grid layout */
+	grid-template-rows: auto 1fr auto; /* Define rows for header, content, and footer */
+	grid-template-columns: 1fr 2fr 1fr; /* Define three columns: nav, main, sidebar */
+	grid-template-areas: 
+		"header header header" /* Header spans all columns */
+		"nav main aside"       /* Middle section with nav, main, and sidebar */
+		"footer footer footer"; /* Footer spans all columns */
+	height: 100vh; /* Full viewport height */
+	gap: 20px; /* Add space between rows and columns */
+}
+
+/* Header styles */
+header {
+	grid-area: header; /* Place header in the header grid area */
+	text-align: center; /* Center the header content */
+	background-color: #ffcccb; /* Light red background */
+	padding: 20px; /* Add spacing inside the header */
+}
+
+/* Navigation styles */
+nav {
+	grid-area: nav; /* Place navigation in the nav grid area */
+	background-color: #d3f8d3; /* Light green background */
+	padding: 20px; /* Add spacing inside the navigation */
+}
+
+/* Main container styles */
+main {
+	grid-area: main; /* Place main content in the main grid area */
+	background-color: #f8f8f8; /* Light gray background */
+	padding: 20px; /* Add spacing inside the main content */
+	text-align: center; /* Center-align the text */
+}
+
+/* Sidebar styles */
+aside {
+	grid-area: aside; /* Place sidebar in the aside grid area */
+	background-color: #fddede; /* Light pink background */
+	padding: 20px; /* Add spacing inside the sidebar */
+}
+
+/* Footer styles */
+footer {
+	grid-area: footer; /* Place footer in the footer grid area */
+	text-align: center; /* Center the footer content */
+	background-color: #add8e6; /* Light blue background */
+	padding: 20px; /* Add spacing inside the footer */
+}
+
+/* Paragraph styles */
+p {
+	line-height: 140%; /* Increase line height for readability */
+	margin-bottom: 1em; /* Add space below each paragraph */
+}
+
+/* Additional list styling */
+ul {
+	list-style-type: none; /* Remove default list styling */
+	padding: 0;
+}
+
+ul li {
+	margin: 10px 0; /* Add space between list items */
+}
